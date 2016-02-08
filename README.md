@@ -6,4 +6,4 @@ Basic demo of UIStackView (I was learning how it works)
 - animate hiding of rows 
 - all contained in a UIScrollView
 
-<img src="http://f.cl.ly/items/012W0e2D173c0Q2t0R2X/Image%202016-02-08%20at%205.04.49%20pm.png" />
+<img src="http://f.cl.ly/items/0l1g0Q20252b2G2L2k1P/Image%202016-02-08%20at%206.04.46%20pm.png" />
