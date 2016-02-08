@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class StackableItem: UIView {
     var heightModifier:CGFloat = 0
@@ -14,6 +15,11 @@ class StackableItem: UIView {
     
     @IBOutlet weak var stackView: UIStackView!
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.layer.cornerRadius = 2
+    }
     override func intrinsicContentSize() -> CGSize {
         let size = super.intrinsicContentSize()
         return CGSize(width: UIViewNoIntrinsicMetric, height: size.height + heightModifier)
@@ -42,9 +48,11 @@ class StackableItem: UIView {
     
     private func relayoutify(){
         UIView.animateWithDuration(0.2) { () -> Void in
+            guard let superview = self.superview else {return}
             self.invalidateIntrinsicContentSize()
-            self.setNeedsLayout()
-            self.layoutIfNeeded()
+            
+            superview.setNeedsLayout()
+            superview.layoutIfNeeded()
         }
     }
 }
