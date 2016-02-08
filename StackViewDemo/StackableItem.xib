@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StackableItem" customModule="StackViewDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gWd-pL-tb1">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xac-dZ-q9U">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="600"/>
+                            <state key="normal" title="Embigify"/>
+                            <connections>
+                                <action selector="embigify:" destination="iN0-l3-epB" eventType="touchUpInside" id="h5R-hu-DNo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeV-DX-6Fb">
+                            <rect key="frame" x="200" y="0.0" width="200" height="600"/>
+                            <state key="normal" title="Shrinkify"/>
+                            <connections>
+                                <action selector="shrinkify:" destination="iN0-l3-epB" eventType="touchUpInside" id="A6A-bF-XOH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsY-Tz-bBr">
+                            <rect key="frame" x="400" y="0.0" width="200" height="600"/>
+                            <state key="normal" title="Hide"/>
+                            <connections>
+                                <action selector="hide:" destination="iN0-l3-epB" eventType="touchUpInside" id="yFI-2U-XmF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gWd-pL-tb1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="21c-V9-nmB"/>
+                <constraint firstAttribute="bottom" secondItem="gWd-pL-tb1" secondAttribute="bottom" id="5y4-z0-jSb"/>
+                <constraint firstAttribute="trailing" secondItem="gWd-pL-tb1" secondAttribute="trailing" id="WST-uk-9e7"/>
+                <constraint firstItem="gWd-pL-tb1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kkw-gG-sJO"/>
+            </constraints>
+            <connections>
+                <outlet property="stackView" destination="gWd-pL-tb1" id="Kdb-aV-KPi"/>
+            </connections>
+        </view>
+    </objects>
+</document>
