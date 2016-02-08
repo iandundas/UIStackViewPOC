@@ -1,4 +1,4 @@
-# UIStackViewPOC
+# UIStackView Demo
 Basic demo of UIStackView (I was learning how it works)
 
 - Add, remove rows 
